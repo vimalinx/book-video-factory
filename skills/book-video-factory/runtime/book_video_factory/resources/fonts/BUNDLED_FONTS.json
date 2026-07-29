@@ -1,0 +1,66 @@
+{
+  "schema_version": "1.0",
+  "description": "Provenance record for every font file bundled with this runtime. A bundled font without an archived license file is a rights gap: doctor.py reports it as a warning and the public-release gate blocks on it. Never add a font here without recording its real upstream source and license.",
+  "license_archive_policy": {
+    "required_for_public_release": true,
+    "rationale": "This repository redistributes the font binary. Redistribution under SIL OFL 1.1 requires the license text to travel with the font. Recording a license id without archiving its text is not sufficient evidence."
+  },
+  "fonts": [
+    {
+      "file": "SmileySans-Oblique.otf",
+      "family": "Smiley Sans",
+      "subfamily": "Oblique",
+      "chinese_name": "得意黑",
+      "license_id": "OFL-1.1",
+      "license_file": "SmileySans-OFL.txt",
+      "copyright_holder": "atelierAnchor",
+      "source_url": "https://github.com/atelier-anchor/smiley-sans/releases/download/v2.0.1/smiley-sans-v2.0.1.zip",
+      "version": "v2.0.1",
+      "sha256": "139b5dcbe70d6d52de85a62d148784c6af4bd161e38fdb62ba0c1e7e5065fca6",
+      "present": true,
+      "note": "Last-resort CJK title face in config/font_policy.json chinese_title, used when no system Noto CJK is installed. The font's family name is 'Smiley Sans' with subfamily 'Oblique'; the policy must match the family, not the full style string."
+    },
+    {
+      "file": "MaShanZheng-Regular.ttf",
+      "family": "Ma Shan Zheng",
+      "subfamily": "Regular",
+      "chinese_name": "马善政楷书",
+      "license_id": "OFL-1.1",
+      "license_file": "MaShanZheng-OFL.txt",
+      "copyright_holder": "The Ma Shan Zheng Project Authors",
+      "source_url": "https://github.com/googlefonts/mashanzheng",
+      "license_source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/mashanzheng/OFL.txt",
+      "sha256": "6d2546bb189c732a8ca29af9e22457b152387d158aa459e4ac2ce1e51788b7fb",
+      "present": true,
+      "note": "Handwriting face for quotations and the split-reveal opener."
+    },
+    {
+      "file": "ZCOOLKuaiLe-Regular.ttf",
+      "family": "ZCOOL KuaiLe",
+      "subfamily": "Regular",
+      "chinese_name": "站酷快乐体",
+      "license_id": "OFL-1.1",
+      "license_file": "ZCOOLKuaiLe-OFL.txt",
+      "copyright_holder": "The ZCOOL KuaiLe Project Authors",
+      "source_url": "https://github.com/googlefonts/zcool-kuaile",
+      "license_source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zcoolkuaile/OFL.txt",
+      "sha256": "812a6fc1fe54b6d73a419245c32dfeba8aa33104d5be90d1cf6af082007cb71d",
+      "present": true,
+      "note": "Rounded display face used for body captions in the 3:4 styles."
+    },
+    {
+      "file": "ZhiMangXing-Regular.ttf",
+      "family": "Zhi Mang Xing",
+      "subfamily": "Regular",
+      "chinese_name": "智芒行书",
+      "license_id": "OFL-1.1",
+      "license_file": "ZhiMangXing-OFL.txt",
+      "copyright_holder": "The Zhi Mang Xing Project Authors",
+      "source_url": "https://github.com/googlefonts/zhimangxing",
+      "license_source_url": "https://raw.githubusercontent.com/google/fonts/main/ofl/zhimangxing/OFL.txt",
+      "sha256": "644e0cae9b40f0b10ab729a01bd32032e3973bac22be3dccae01bf6ae7fde969",
+      "present": true,
+      "note": "Alternate handwriting face for the calligraphy reveal."
+    }
+  ]
+}
