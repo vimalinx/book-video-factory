@@ -1,0 +1,48 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.env
+.venv/
+dist/
+build/
+
+# Production media, source records, credentials, and account/editor metadata
+book_video_warehouse/**
+!book_video_warehouse/.gitkeep
+!book_video_warehouse/README.md
+*.mp4
+*.mov
+*.mkv
+*.mp3
+*.wav
+*.m4a
+*.flac
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.srt
+*.ass
+*.otf
+*.ttf
+
+# Public showcase assets explicitly approved for this repository. Keep this
+# allowlist exact so newly generated production media remains ignored.
+!examples/posters/boundaries.jpg
+!examples/posters/highly-sensitive.jpg
+!examples/posters/no-people-pleasing.jpg
+!examples/posters/original-family.jpg
+!examples/videos/boundaries.mp4
+!examples/videos/highly-sensitive.mp4
+!examples/videos/no-people-pleasing.mp4
+!examples/videos/original-family.mp4
+
+# GistHubs feed images must be committed; GistHubs proxies them from the repo.
+!.gisthub/**/*.jpg
+!.gisthub/**/*.jpeg
+!.gisthub/**/*.png
+
+# User-provided authorization material
+voice_profiles/
+reference_media/
+chatcut/

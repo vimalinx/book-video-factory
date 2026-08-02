@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Default English stock-search queries per V4 timeline scene for atmospheric B-roll. Keep Coverr queries short (1-2 words); longer phrases often return zero hits. Override per project via 03_images_生成图片/broll-approved/scene-queries.override.json when needed.",
+  "canvas": {"width": 720, "height": 960, "fps": 30},
+  "selection": {
+    "prefer_vertical": true,
+    "min_duration_seconds": 4.0,
+    "max_duration_seconds": 45.0,
+    "reject_premium": true,
+    "reject_ai_generated": false
+  },
+  "scenes": {
+    "HOOK": {
+      "intent": "平静开场，雾气/晨光氛围",
+      "queries": ["foggy forest", "mist", "morning"]
+    },
+    "BOOK": {
+      "intent": "书本揭示，安静桌面/阅读氛围",
+      "queries": ["book", "reading", "library"]
+    },
+    "THESIS": {
+      "intent": "论点建立，林间穿透光",
+      "queries": ["sunlight forest", "trees", "forest"]
+    },
+    "RELATION": {
+      "intent": "关系张力，平静水面/对坐氛围",
+      "queries": ["lake", "reflection", "conversation"]
+    },
+    "SUPPORT": {
+      "intent": "支持与陪伴，草地/并肩感",
+      "queries": ["meadow", "grass", "field"]
+    },
+    "BOUNDARIES": {
+      "intent": "边界感，秋叶/分隔空间",
+      "queries": ["autumn", "leaves", "doorway"]
+    },
+    "FIRST_STEP": {
+      "intent": "迈出第一步，小径/脚步",
+      "queries": ["path", "walking", "trail"]
+    },
+    "QUESTION": {
+      "intent": "自问，雨窗/沉思",
+      "queries": ["rain window", "rain", "window"]
+    },
+    "SELF_CARE": {
+      "intent": "自我照顾，茶/安静室内",
+      "queries": ["tea", "coffee", "calm"]
+    },
+    "LOVE": {
+      "intent": "爱与柔软，黄昏暖色",
+      "queries": ["sunset", "golden hour", "dusk"]
+    },
+    "RAIN": {
+      "intent": "雨天情绪，雨滴/湿叶",
+      "queries": ["rain", "raindrops", "wet"]
+    },
+    "DAWN": {
+      "intent": "收束黎明，日出/希望",
+      "queries": ["sunrise", "dawn", "horizon"]
+    }
+  }
+}

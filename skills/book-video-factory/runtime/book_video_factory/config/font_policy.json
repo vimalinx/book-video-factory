@@ -1,0 +1,131 @@
+{
+  "schema_version": "1.0",
+  "policy_id": "portable-cjk-v1",
+  "description": "Portable font resolution policy. Renderers must resolve fonts through book_video_factory.font_resolver using this policy instead of hardcoding paths. Machine-specific absolute paths are rejected so a workspace bootstrapped on one operating system still renders on another.",
+  "resolution_order": [
+    "operator_override",
+    "style_config",
+    "platform_fonts",
+    "bundled_fonts"
+  ],
+  "portability_contract": {
+    "absolute_paths_in_categories": "forbidden",
+    "face_selection": "by_family_name_not_index",
+    "reason": "A .ttc collection stores several families. Selecting face index 0 of NotoSansCJK-Regular.ttc yields Noto Sans CJK JP, which renders Japanese glyph variants for Simplified Chinese text. Candidates therefore declare the required family name and the resolver enumerates the collection to find it."
+  },
+  "search_paths": {
+    "linux": [
+      "/usr/share/fonts",
+      "/usr/local/share/fonts",
+      "~/.local/share/fonts",
+      "~/.fonts"
+    ],
+    "darwin": [
+      "/System/Library/Fonts",
+      "/System/Library/Fonts/Supplemental",
+      "/Library/Fonts",
+      "~/Library/Fonts"
+    ],
+    "win32": [
+      "C:/Windows/Fonts"
+    ]
+  },
+  "categories": {
+    "chinese_body": {
+      "description": "Simplified Chinese body and caption text.",
+      "required_script": "Hans",
+      "candidates": [
+        {"file": "NotoSansCJK-Regular.ttc", "family": "Noto Sans CJK SC"},
+        {"file": "NotoSansCJKsc-Regular.otf", "family": "Noto Sans CJK SC"},
+        {"file": "NotoSansSC-Regular.otf", "family": "Noto Sans SC"},
+        {"file": "NotoSansSC-Regular.ttf", "family": "Noto Sans SC"},
+        {"file": "SourceHanSansSC-Regular.otf", "family": "Source Han Sans SC"},
+        {"file": "Songti.ttc", "family": "Songti SC"},
+        {"file": "PingFang.ttc", "family": "PingFang SC"},
+        {"file": "msyh.ttc", "family": "Microsoft YaHei"},
+        {"file": "WenQuanYiMicroHei.ttf", "family": "WenQuanYi Micro Hei"},
+        {"file": "DroidSansFallbackFull.ttf", "family": "Droid Sans Fallback"}
+      ]
+    },
+    "chinese_title": {
+      "description": "Simplified Chinese display and title text.",
+      "required_script": "Hans",
+      "candidates": [
+        {"file": "NotoSansCJK-Bold.ttc", "family": "Noto Sans CJK SC"},
+        {"file": "NotoSansCJKsc-Bold.otf", "family": "Noto Sans CJK SC"},
+        {"file": "NotoSansSC-Bold.otf", "family": "Noto Sans SC"},
+        {"file": "NotoSansSC-Bold.ttf", "family": "Noto Sans SC"},
+        {"file": "SourceHanSansSC-Bold.otf", "family": "Source Han Sans SC"},
+        {"file": "SmileySans-Oblique.otf", "family": "Smiley Sans"},
+        {"file": "PingFang.ttc", "family": "PingFang SC"},
+        {"file": "msyhbd.ttc", "family": "Microsoft YaHei"}
+      ]
+    },
+    "chinese_serif": {
+      "description": "Simplified Chinese serif body, used by the bilingual editorial style.",
+      "required_script": "Hans",
+      "candidates": [
+        {"file": "NotoSerifCJK-Regular.ttc", "family": "Noto Serif CJK SC"},
+        {"file": "NotoSerifCJKsc-Regular.otf", "family": "Noto Serif CJK SC"},
+        {"file": "NotoSerifSC-Regular.otf", "family": "Noto Serif SC"},
+        {"file": "SourceHanSerifSC-Regular.otf", "family": "Source Han Serif SC"},
+        {"file": "Songti.ttc", "family": "Songti SC"},
+        {"file": "simsun.ttc", "family": "SimSun"}
+      ]
+    },
+    "chinese_rounded": {
+      "description": "Friendly rounded Simplified Chinese display face for cards and callouts.",
+      "required_script": "Hans",
+      "candidates": [
+        {"file": "ZCOOLKuaiLe-Regular.ttf", "family": "ZCOOL KuaiLe"},
+        {"file": "NotoSansSC-Medium.otf", "family": "Noto Sans SC"},
+        {"file": "NotoSansCJK-Medium.ttc", "family": "Noto Sans CJK SC"}
+      ]
+    },
+    "chinese_handwriting": {
+      "description": "Handwritten Simplified Chinese face for quotations and annotations.",
+      "required_script": "Hans",
+      "candidates": [
+        {"file": "MaShanZheng-Regular.ttf", "family": "Ma Shan Zheng"},
+        {"file": "ZhiMangXing-Regular.ttf", "family": "Zhi Mang Xing"}
+      ]
+    },
+    "english": {
+      "description": "Latin sans-serif for bilingual subtitles and labels.",
+      "required_script": "Latn",
+      "candidates": [
+        {"file": "NotoSans-Regular.ttf", "family": "Noto Sans"},
+        {"file": "NotoSans-Medium.ttf", "family": "Noto Sans"},
+        {"file": "DejaVuSans.ttf", "family": "DejaVu Sans"},
+        {"file": "LiberationSans-Regular.ttf", "family": "Liberation Sans"},
+        {"file": "Helvetica.ttc", "family": "Helvetica"},
+        {"file": "arial.ttf", "family": "Arial"}
+      ]
+    },
+    "english_serif": {
+      "description": "Latin serif for the bilingual editorial secondary caption.",
+      "required_script": "Latn",
+      "candidates": [
+        {"file": "NotoSerif-Regular.ttf", "family": "Noto Serif"},
+        {"file": "DejaVuSerif.ttf", "family": "DejaVu Serif"},
+        {"file": "LiberationSerif-Regular.ttf", "family": "Liberation Serif"},
+        {"file": "Times New Roman.ttf", "family": "Times New Roman"},
+        {"file": "times.ttf", "family": "Times New Roman"}
+      ]
+    }
+  },
+  "install_hints": {
+    "linux": {
+      "pacman": "sudo pacman -S noto-fonts-cjk noto-fonts",
+      "apt": "sudo apt install fonts-noto-cjk fonts-noto",
+      "dnf": "sudo dnf install google-noto-sans-cjk-fonts google-noto-fonts",
+      "generic": "Install Noto Sans CJK SC and Noto Sans through your package manager."
+    },
+    "darwin": {
+      "generic": "brew install --cask font-noto-sans-cjk-sc font-noto-sans"
+    },
+    "win32": {
+      "generic": "Install Noto Sans SC from https://fonts.google.com/noto/specimen/Noto+Sans+SC"
+    }
+  }
+}

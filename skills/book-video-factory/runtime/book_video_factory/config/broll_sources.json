@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.1",
+  "default_release_policy": "commercial-capable",
+  "provider_priority": ["coverr", "pexels", "pixabay"],
+  "providers": {
+    "coverr": {
+      "status": "configured",
+      "purpose": "primary free stock video B-roll search and download (no API key)",
+      "search_contract": "Search with one or two English keywords, e.g. 'misty mountain' or 'rain window'. Coverr matches every term, so a three-word phrase such as 'misty mountain sunrise' returns zero hits; the client narrows a long phrase automatically and records the query that actually matched in the clip's search_query. Prefer non-premium hits; the search response carries no mp4 URL, so the detail endpoint is fetched per clip.",
+      "api_base": "https://coverr.co/api/videos",
+      "detail_url_template": "https://coverr.co/api/videos/{id}",
+      "credential": null,
+      "license": {
+        "name": "Coverr License (CC0-like)",
+        "url": "https://coverr.co/license",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["Coverr License"],
+      "rejected_licenses": []
+    },
+    "pexels": {
+      "status": "configured",
+      "purpose": "free stock video B-roll candidate research and download",
+      "search_contract": "Search with one or two English keywords, e.g. 'misty mountain'. Prefer orientation=portrait for 3:4 delivery. A long phrase is narrowed automatically and the effective query is recorded per clip.",
+      "api_base": "https://api.pexels.com/videos/search",
+      "credential": {
+        "api_key_env": "PEXELS_API_KEY",
+        "key_url": "https://www.pexels.com/api/"
+      },
+      "license": {
+        "name": "Pexels License",
+        "url": "https://www.pexels.com/license/",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["Pexels License"],
+      "rejected_licenses": []
+    },
+    "pixabay": {
+      "status": "configured",
+      "purpose": "free stock video B-roll candidate research and download",
+      "search_contract": "Search with one or two English keywords, e.g. 'ocean waves'. A long phrase is narrowed automatically and the effective query is recorded per clip.",
+      "api_base": "https://pixabay.com/api/videos/",
+      "credential": {
+        "api_key_env": "PIXABAY_API_KEY",
+        "key_url": "https://pixabay.com/api/docs/"
+      },
+      "license": {
+        "name": "Pixabay Content License",
+        "url": "https://pixabay.com/service/license-summary/",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["Pixabay Content License"],
+      "rejected_licenses": []
+    },
+    "mixkit": {
+      "status": "manual_only",
+      "purpose": "curated free stock video B-roll (manual browse/download; no stable public search API)",
+      "search_contract": "Browse https://mixkit.co/free-stock-video/ and download clips manually into 03_images_生成图片/broll-approved/.",
+      "api_base": null,
+      "credential": null,
+      "license": {
+        "name": "Mixkit Stock Video Free License",
+        "url": "https://mixkit.co/license/",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["Mixkit Stock Video Free License"],
+      "rejected_licenses": []
+    },
+    "life_of_vids": {
+      "status": "manual_only",
+      "purpose": "small cinematic free stock library (manual download)",
+      "search_contract": "Browse https://www.lifeofvids.com/ and download CC0 clips manually.",
+      "api_base": null,
+      "credential": null,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["CC0"],
+      "rejected_licenses": []
+    },
+    "free_nature_stock": {
+      "status": "manual_only",
+      "purpose": "nature-focused free 4K stock (manual download)",
+      "search_contract": "Browse https://freenaturestock.com/ and download clips manually.",
+      "api_base": null,
+      "credential": null,
+      "license": {
+        "name": "CC0",
+        "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["CC0"],
+      "rejected_licenses": []
+    },
+    "vidsplay": {
+      "status": "manual_only",
+      "purpose": "small free HD stock library (manual download)",
+      "search_contract": "Browse https://www.vidsplay.com/ and download clips manually.",
+      "api_base": null,
+      "credential": null,
+      "license": {
+        "name": "Vidsplay Free License",
+        "url": "https://www.vidsplay.com/",
+        "commercial_use": true,
+        "attribution_required": false
+      },
+      "accepted_licenses": ["Vidsplay Free License"],
+      "rejected_licenses": []
+    },
+    "dareful": {
+      "status": "manual_only",
+      "purpose": "editorial/cinematic free clips (attribution required — do not auto-select for commercial-capable default)",
+      "search_contract": "Browse https://www.dareful.com/ only when attribution workflow is approved.",
+      "api_base": null,
+      "credential": null,
+      "license": {
+        "name": "CC BY 3.0",
+        "url": "https://creativecommons.org/licenses/by/3.0/",
+        "commercial_use": true,
+        "attribution_required": true
+      },
+      "accepted_licenses": ["CC BY 3.0"],
+      "rejected_licenses": []
+    }
+  }
+}
