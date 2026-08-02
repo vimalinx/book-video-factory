@@ -37,6 +37,11 @@ book_video_warehouse/**
 !examples/videos/no-people-pleasing.mp4
 !examples/videos/original-family.mp4
 
+# GistHubs feed images must be committed; GistHubs proxies them from the repo.
+!.gisthub/**/*.jpg
+!.gisthub/**/*.jpeg
+!.gisthub/**/*.png
+
 # User-provided authorization material
 voice_profiles/
 reference_media/
