@@ -1,0 +1,11 @@
+{
+  "created_at": "2026-07-22T00:38:45Z",
+  "project_id": "PRJ-book-video-factory-e11d317d",
+  "project_name": "book-video-factory",
+  "promotion_targets": [
+    "obsidiam",
+    "skill"
+  ],
+  "raw_evidence_policy": "local-private",
+  "schema_version": "1.0"
+}

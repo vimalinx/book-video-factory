@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-07-22T04:53:18Z",
+  "decision": "继续 BVF 准发布工厂；不新建产品壳；P0 是封面权利+人工上传",
+  "id": "DEC-20260722T045318Z-54ec2f",
+  "kind": "decision",
+  "rationale": "RUN evaluate qc_passed 但 cover_rights/publish 未过；公开书单号路线与 BVF 目标不同",
+  "schema_version": "1.0",
+  "source_ids": [
+    "RUN-20260722T045211Z-a51b10"
+  ],
+  "status": "accepted",
+  "supersedes": null,
+  "title": "内容主线暂不产品壳",
+  "updated_at": "2026-07-22T04:53:18Z"
+}

@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="实拍 B-roll 图书视频样片预览：拆字蒙版开场与自然风景素材">
+    <title>实拍 B-roll 样片预览 · Book Video Factory</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --background: #090909;
+        --surface: #141414;
+        --surface-strong: #1b171f;
+        --border: #2b2b2b;
+        --text: #f5f5f3;
+        --muted: #aaa8a2;
+        --accent: #e2b35c;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        background: var(--background);
+        color: var(--text);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans CJK SC", sans-serif;
+      }
+
+      main {
+        width: min(1080px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 56px 0 80px;
+      }
+
+      header { max-width: 760px; margin-bottom: 36px; }
+
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(2rem, 6vw, 4.5rem);
+        letter-spacing: -0.04em;
+      }
+
+      p { margin: 0; color: var(--muted); line-height: 1.7; }
+      a { color: var(--accent); }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px;
+      }
+
+      article {
+        scroll-margin-top: 24px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        border-radius: 18px;
+        background: var(--surface);
+      }
+
+      video {
+        display: block;
+        width: 100%;
+        aspect-ratio: 3 / 4;
+        background: #000;
+        object-fit: contain;
+      }
+
+      .featured {
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: minmax(260px, 380px) 1fr;
+        background: var(--surface-strong);
+      }
+
+      .meta {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 18px 20px 20px;
+      }
+
+      .featured .meta {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: clamp(28px, 6vw, 64px);
+      }
+
+      .eyebrow {
+        color: var(--accent);
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      h2 { margin: 0; font-size: 1.1rem; }
+      .featured h2 { font-size: clamp(1.8rem, 4vw, 3.2rem); }
+      .duration { color: var(--muted); font-variant-numeric: tabular-nums; }
+      .description { max-width: 560px; }
+
+      footer {
+        margin-top: 36px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        font-size: 0.9rem;
+      }
+
+      @media (max-width: 720px) {
+        main { padding-top: 32px; }
+        .grid { grid-template-columns: 1fr; }
+        .featured { grid-column: auto; grid-template-columns: 1fr; }
+        .featured .meta { padding: 24px 20px 28px; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>实拍 B-roll 样片</h1>
+        <p>《非暴力沟通》同一条脚本、三种背景策略的对比：整条实拍风景、程序化渐变背景、混合实拍素材。均为黑色蒙版书法字镂空拆字开场，素材来自 Coverr（CC0 类许可，可商用、无需署名）。</p>
+      </header>
+
+      <section class="grid" aria-label="B-roll 样片">
+        <article id="broll-local" class="featured">
+          <video controls playsinline preload="metadata" poster="pipeline-demo/posters/broll-local.jpg">
+            <source src="pipeline-demo/nonviolent-communication-broll-local-3x4.mp4" type="video/mp4">
+            当前浏览器不支持 HTML5 视频播放。
+          </video>
+          <div class="meta">
+            <span class="eyebrow">整条实拍风景 · broll-local</span>
+            <h2>山涧拆字开场 · 全程自然风景</h2>
+            <span class="duration">70.9s · 3:4</span>
+            <p class="description">黑色蒙版上"沟通"二字镂空透出山涧溪流，蒙版上下裂开后，整条视频按场景切换林间小路、雾林、林隙阳光、雨滴、海浪等真实素材，无任何空白色卡。</p>
+          </div>
+        </article>
+
+        <article id="broll-nature">
+          <video controls playsinline preload="metadata" poster="pipeline-demo/posters/broll-nature.jpg">
+            <source src="pipeline-demo/nonviolent-communication-broll-nature-3x4.mp4" type="video/mp4">
+            当前浏览器不支持 HTML5 视频播放。
+          </video>
+          <div class="meta"><h2>程序化背景版</h2><span class="duration">70.9s</span></div>
+        </article>
+
+        <article id="stock-demo">
+          <video controls playsinline preload="metadata" poster="pipeline-demo/posters/stock-demo.jpg">
+            <source src="pipeline-demo/stock-demo-broll-stock-3x4.mp4" type="video/mp4">
+            当前浏览器不支持 HTML5 视频播放。
+          </video>
+          <div class="meta"><h2>混合实拍素材版</h2><span class="duration">59.9s</span></div>
+        </article>
+      </section>
+
+      <footer>
+        <p>本地预览页，样片素材来源与哈希见 pipeline-demo/broll-provenance.json。程序化背景版仅开头为真实素材，20 秒后退化渐变色卡，仅作对比保留。</p>
+      </footer>
+    </main>
+  </body>
+</html>

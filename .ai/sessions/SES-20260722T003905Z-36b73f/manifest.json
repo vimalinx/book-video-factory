@@ -1,0 +1,22 @@
+{
+  "agent": "cursor",
+  "created_at": "2026-07-22T00:39:05Z",
+  "evidence": [],
+  "finished_at": "2026-07-22T00:58:55Z",
+  "id": "SES-20260722T003905Z-36b73f",
+  "kind": "session",
+  "model": null,
+  "native_session_id": null,
+  "native_session_ref": null,
+  "notes": [],
+  "objective": "按 book-video-factory 真实跑一套成片给用户看效果",
+  "outcome": "success",
+  "schema_version": "1.0",
+  "sensitivity": "internal",
+  "source_ids": [],
+  "status": "finished",
+  "summary": "按工厂真链路跑通双语成片试产，成片 demo-workspace/nonviolent-communication-demo.mp4",
+  "tags": [],
+  "title": "图书视频工厂出片试跑",
+  "updated_at": "2026-07-22T00:58:55Z"
+}

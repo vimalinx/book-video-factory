@@ -1,0 +1,57 @@
+{
+  "command": [
+    "bash",
+    "-lc",
+    "cd /home/vimalinx/MakeMoney/book-video-factory/demo-workspace/book_video_factory && PYTHONPATH=src python3 scripts/render_broll_video.py '/home/vimalinx/MakeMoney/book-video-factory/demo-workspace/book_video_warehouse/projects/nonviolent-communication' --mode stock --force-fetch"
+  ],
+  "created_at": "2026-07-22T16:34:43Z",
+  "cwd": "/home/vimalinx/MakeMoney/book-video-factory",
+  "exit_code": null,
+  "experiment_id": "EXP-20260722T162933Z-63ba69",
+  "finished_at": null,
+  "git_after": null,
+  "git_before": {
+    "branch": "main",
+    "changed_paths": [
+      "M skills/book-video-factory/runtime/book_video_factory/config/brand_voice_profile.json",
+      " M skills/book-video-factory/runtime/book_video_factory/config/video_style_v2.json",
+      " M skills/book-video-factory/runtime/book_video_factory/config/voice_candidates.json",
+      " M skills/book-video-factory/runtime/book_video_factory/docs/ASSET_PROVIDER_POLICY.md",
+      " M skills/book-video-factory/runtime/book_video_factory/scripts/build_final_video_v2.py",
+      "?? .ai/",
+      "?? demo-workspace/",
+      "?? skills/book-video-factory/runtime/book_video_factory/config/broll_scene_queries.json",
+      "?? skills/book-video-factory/runtime/book_video_factory/config/broll_sources.json",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/fetch_broll.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/prepare_broll_scenes.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/render_broll_video.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/backgrounds.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/broll.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/font_resolver.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/tests/test_broll_stock.py",
+      "?? workspaces/"
+    ],
+    "changed_paths_truncated": false,
+    "commit": "7ec72370cce1d2fa899e0e0f9b2c0d8131d4660b",
+    "dirty": true,
+    "root": "/home/vimalinx/MakeMoney/book-video-factory"
+  },
+  "id": "RUN-20260722T163443Z-235813",
+  "kind": "run",
+  "schema_version": "1.0",
+  "session_id": "SES-20260722T162457Z-b07ad4",
+  "started_at": "2026-07-22T16:34:43Z",
+  "status": "running",
+  "stderr": {
+    "kind": "file",
+    "path": ".ai/runs/RUN-20260722T163443Z-235813/stderr.log",
+    "scope": "project"
+  },
+  "stdout": {
+    "kind": "file",
+    "path": ".ai/runs/RUN-20260722T163443Z-235813/stdout.log",
+    "scope": "project"
+  },
+  "title": "prepare+render stock broll",
+  "updated_at": "2026-07-22T16:34:43Z"
+}

@@ -1,0 +1,121 @@
+{
+  "command": [
+    "python3",
+    "/home/vimalinx/MakeMoney/book-video-factory/demo-workspace/book_video_factory/scripts/workflow.py",
+    "evaluate",
+    "--project",
+    "/home/vimalinx/MakeMoney/book-video-factory/demo-workspace/book_video_warehouse/projects/nonviolent-communication",
+    "--release-id",
+    "r1-20260722-mainline"
+  ],
+  "created_at": "2026-07-22T04:52:11Z",
+  "cwd": "/home/vimalinx/MakeMoney/book-video-factory",
+  "evidence": [
+    {
+      "kind": "directory",
+      "mode": "living",
+      "mtime_ns": 1784695849564450117,
+      "path": "workspaces/content-mainline-20260722/upload-packages/nonviolent-communication-r1-20260722-mainline",
+      "role": "upload-package",
+      "scope": "project",
+      "size_bytes": 622,
+      "tree": {
+        "file_count": 16,
+        "limit": 20000,
+        "metadata_sha256": "29aeda5d1597e0d9632c461509754babd3056e9e072ae088e6a81f2712ea404e",
+        "sample_paths": [
+          "2026-07-22T04-50-18.203500_00-00-dc96dee2-bfec-4767-9882-6075e6e45076.json",
+          "BOOK_COVER_SOURCE.json",
+          "MUSIC_ATTRIBUTION.txt",
+          "READY_FOR_HUMAN_UPLOAD.md",
+          "UPLOAD_PACKAGE_MANIFEST.json",
+          "nonviolent-communication-v4-bilingual-3x4.mp4",
+          "subtitles.v4.bilingual.srt",
+          "subtitles.v4.en.srt",
+          "subtitles.v4.zh-CN.srt",
+          "v4_release_gate.json",
+          "approvals/2026-07-22T04-50-18.373866_00-00-93fc2649-bcb3-4d8c-817d-bff7bd2c601e.json",
+          "approvals/2026-07-22T04-50-18.535719_00-00-5bc03422-dfb6-4390-823b-1d6607a095f7.json",
+          "approvals/2026-07-22T04-50-18.691091_00-00-4d5caf18-7f8d-419b-989d-8b5d044965d1.json",
+          "approvals/2026-07-22T04-50-18.849730_00-00-bf8ac6bb-cbb1-430c-b13e-d4e53f7ffdd4.json",
+          "approvals/2026-07-22T04-50-19.002696_00-00-435166ea-f636-4ba7-893a-102b5f52bacf.json",
+          "approvals/2026-07-22T04-50-19.158637_00-00-063b46c9-40c6-4622-8973-b1a2f5e77c00.json"
+        ],
+        "skipped_entries": 0,
+        "total_bytes": 5812236,
+        "truncated": false
+      }
+    }
+  ],
+  "exit_code": 0,
+  "experiment_id": "EXP-20260722T045211Z-4598f6",
+  "finished_at": "2026-07-22T04:52:11Z",
+  "git_after": {
+    "branch": "main",
+    "changed_paths": [
+      "M skills/book-video-factory/runtime/book_video_factory/config/brand_voice_profile.json",
+      " M skills/book-video-factory/runtime/book_video_factory/config/video_style_v2.json",
+      " M skills/book-video-factory/runtime/book_video_factory/config/voice_candidates.json",
+      " M skills/book-video-factory/runtime/book_video_factory/scripts/build_final_video_v2.py",
+      "?? .ai/",
+      "?? demo-workspace/",
+      "?? skills/book-video-factory/runtime/book_video_factory/config/broll_sources.json",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/fetch_broll.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/render_broll_video.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/backgrounds.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/broll.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/font_resolver.py",
+      "?? workspaces/"
+    ],
+    "changed_paths_truncated": false,
+    "commit": "7ec72370cce1d2fa899e0e0f9b2c0d8131d4660b",
+    "dirty": true,
+    "root": "/home/vimalinx/MakeMoney/book-video-factory"
+  },
+  "git_before": {
+    "branch": "main",
+    "changed_paths": [
+      "M skills/book-video-factory/runtime/book_video_factory/config/brand_voice_profile.json",
+      " M skills/book-video-factory/runtime/book_video_factory/config/video_style_v2.json",
+      " M skills/book-video-factory/runtime/book_video_factory/config/voice_candidates.json",
+      " M skills/book-video-factory/runtime/book_video_factory/scripts/build_final_video_v2.py",
+      "?? .ai/",
+      "?? demo-workspace/",
+      "?? skills/book-video-factory/runtime/book_video_factory/config/broll_sources.json",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/fetch_broll.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/scripts/render_broll_video.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/backgrounds.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/broll.py",
+      "?? skills/book-video-factory/runtime/book_video_factory/src/book_video_factory/font_resolver.py",
+      "?? workspaces/"
+    ],
+    "changed_paths_truncated": false,
+    "commit": "7ec72370cce1d2fa899e0e0f9b2c0d8131d4660b",
+    "dirty": true,
+    "root": "/home/vimalinx/MakeMoney/book-video-factory"
+  },
+  "id": "RUN-20260722T045211Z-a51b10",
+  "kind": "run",
+  "schema_version": "1.0",
+  "session_id": "SES-20260722T044849Z-d6a50c",
+  "started_at": "2026-07-22T04:52:11Z",
+  "status": "passed",
+  "stderr": {
+    "kind": "file",
+    "mtime_ns": 1784695931610270695,
+    "path": ".ai/runs/RUN-20260722T045211Z-a51b10/stderr.log",
+    "scope": "project",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0
+  },
+  "stdout": {
+    "kind": "file",
+    "mtime_ns": 1784695931766270255,
+    "path": ".ai/runs/RUN-20260722T045211Z-a51b10/stdout.log",
+    "scope": "project",
+    "sha256": "bcf8804be4685bb36791e3b1a229b5fd298d98181de9fcdd666bd1ccd02aaea5",
+    "size_bytes": 1486
+  },
+  "title": "evaluate-r1-20260722-mainline",
+  "updated_at": "2026-07-22T04:52:29Z"
+}

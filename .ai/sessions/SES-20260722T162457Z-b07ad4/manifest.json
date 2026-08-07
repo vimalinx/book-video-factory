@@ -1,0 +1,23 @@
+{
+  "agent": "cursor",
+  "created_at": "2026-07-22T16:24:57Z",
+  "evidence": [],
+  "finished_at": "2026-07-26T12:49:54Z",
+  "id": "SES-20260722T162457Z-b07ad4",
+  "kind": "session",
+  "model": null,
+  "native_session_id": null,
+  "native_session_ref": null,
+  "notes": [],
+  "objective": "Replace procedural nature backgrounds with real free stock B-roll: expand sources, scene query map, fetch+crop into render_broll_video",
+  "outcome": "failed",
+  "schema_version": "1.0",
+  "sensitivity": "internal",
+  "source_ids": [],
+  "status": "finished",
+  "summary": "[derived] 本收口由 `session-close` 从账本证据自动生成，不是人工复盘。\n\n- 真实运行 1 次（通过 0，失败 1）；实验 1 个；决策 0 条\n- 失败的运行：\n    - `bash -lc cd /home/vimalinx/MakeMoney/book-video-factory/demo-workspace/book_vide` exit=None (RUN-20260722T163443Z-235813)\n- 未收尾的实验（下一步的起点）：\n    - Stock B-roll as default render source (EXP-20260722T162933Z-63ba69)",
+  "summary_source": "derived",
+  "tags": [],
+  "title": "Stock B-roll pipeline",
+  "updated_at": "2026-07-26T12:49:54Z"
+}

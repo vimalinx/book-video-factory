@@ -1,0 +1,22 @@
+{
+  "agent": "cursor",
+  "created_at": "2026-07-22T04:48:49Z",
+  "evidence": [],
+  "finished_at": "2026-07-22T04:53:59Z",
+  "id": "SES-20260722T044849Z-d6a50c",
+  "kind": "session",
+  "model": null,
+  "native_session_id": null,
+  "native_session_ref": null,
+  "notes": [],
+  "objective": "完成Action Desk重排后，跑通BVF一书一风格母版审批准发布，写十二差距笔记，完成W2-W4可验证产物",
+  "outcome": "partial",
+  "schema_version": "1.0",
+  "sensitivity": "internal",
+  "source_ids": [],
+  "status": "finished",
+  "summary": "内容主线执行：Todo重排；BVF准发布包；十二差距笔记；W2-W4产物与暂不产品壳决定；P0留给人手上传",
+  "tags": [],
+  "title": "内容主线：BVF一条闭环+4周盘点执行",
+  "updated_at": "2026-07-22T04:53:59Z"
+}

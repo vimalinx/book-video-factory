@@ -1,0 +1,64 @@
+{
+  "command": [
+    "python3",
+    "book_video_factory/scripts/render_ready_v4.py",
+    "--warehouse",
+    "book_video_warehouse",
+    "--slug",
+    "nonviolent-communication",
+    "--release-id",
+    "r1-demo",
+    "--force"
+  ],
+  "created_at": "2026-07-22T00:55:18Z",
+  "cwd": "/home/vimalinx/MakeMoney/book-video-factory/demo-workspace",
+  "exit_code": 1,
+  "experiment_id": "EXP-20260722T004102Z-1119c7",
+  "finished_at": "2026-07-22T00:55:19Z",
+  "git_after": {
+    "branch": "main",
+    "changed_paths": [
+      "?? .ai/",
+      "?? demo-workspace/"
+    ],
+    "changed_paths_truncated": false,
+    "commit": "7ec72370cce1d2fa899e0e0f9b2c0d8131d4660b",
+    "dirty": true,
+    "root": "/home/vimalinx/MakeMoney/book-video-factory"
+  },
+  "git_before": {
+    "branch": "main",
+    "changed_paths": [
+      "?? .ai/",
+      "?? demo-workspace/"
+    ],
+    "changed_paths_truncated": false,
+    "commit": "7ec72370cce1d2fa899e0e0f9b2c0d8131d4660b",
+    "dirty": true,
+    "root": "/home/vimalinx/MakeMoney/book-video-factory"
+  },
+  "id": "RUN-20260722T005518Z-bfe837",
+  "kind": "run",
+  "schema_version": "1.0",
+  "session_id": null,
+  "started_at": "2026-07-22T00:55:18Z",
+  "status": "failed",
+  "stderr": {
+    "kind": "file",
+    "mtime_ns": 1784681719942413281,
+    "path": ".ai/runs/RUN-20260722T005518Z-bfe837/stderr.log",
+    "scope": "project",
+    "sha256": "a0a33747b815e2851d7054bda6c751a36170f56b889f1d34e11648b5f2ea3500",
+    "size_bytes": 2349
+  },
+  "stdout": {
+    "kind": "file",
+    "mtime_ns": 1784681718475443188,
+    "path": ".ai/runs/RUN-20260722T005518Z-bfe837/stdout.log",
+    "scope": "project",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "size_bytes": 0
+  },
+  "title": "渲染双语V4母版",
+  "updated_at": "2026-07-22T00:55:19Z"
+}

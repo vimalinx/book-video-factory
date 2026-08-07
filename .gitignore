@@ -46,3 +46,17 @@ book_video_warehouse/**
 voice_profiles/
 reference_media/
 chatcut/
+
+# Local model weights (re-downloadable; exceed GitHub file-size limits)
+asset/
+*.safetensors
+
+# Local production workspaces and scratch renders. The public repository
+# deliberately ships no book content or production media; these stay local.
+demo-workspace/
+pipeline-demo/
+workspaces/
+
+# AI evidence ledger: project records are committed, native-session indexes
+# and raw logs are local-private (see .ai/README.md).
+.ai/native-sessions/

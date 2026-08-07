@@ -1,0 +1,43 @@
+{
+  "created_at": "2026-07-22T04:52:11Z",
+  "evidence": [
+    {
+      "kind": "file",
+      "mode": "living",
+      "mtime_ns": 1784695877847438503,
+      "path": "workspaces/content-mainline-20260722/benchmarks/十二与开源方案-vs-BVF.md",
+      "role": "benchmark-note",
+      "scope": "project",
+      "sha256": "e8a38123a3d1ee2fc987519c1673ba9bb24eb6d69910e8401e047ca7c10c731c",
+      "size_bytes": 2844
+    },
+    {
+      "kind": "file",
+      "mode": "living",
+      "mtime_ns": 1784696039267026218,
+      "path": "workspaces/content-mainline-20260722/decisions/20260722-BVF一页复盘.md",
+      "role": "retrospect",
+      "scope": "project",
+      "sha256": "9fa2009990ce2d79f5b89af24fc785b675dc77aed2234bdeb54013456ce492ce",
+      "size_bytes": 514
+    }
+  ],
+  "finished_at": "2026-07-22T04:52:52Z",
+  "hypothesis": "一书一风格可导出准发布上传包；cover_rights 拒绝属预期 fail-closed",
+  "id": "EXP-20260722T045211Z-4598f6",
+  "kind": "experiment",
+  "outcome": "partial",
+  "result": "QC passed and upload package exported; cover_rights rejected and publish not approved; awaiting human cover clearance + platform upload",
+  "run_ids": [
+    "RUN-20260722T045211Z-a51b10"
+  ],
+  "schema_version": "1.0",
+  "session_id": "SES-20260722T044849Z-d6a50c",
+  "status": "finished",
+  "tags": [
+    "content-mainline",
+    "bvf"
+  ],
+  "title": "BVF内容主线准发布闭环",
+  "updated_at": "2026-07-22T04:53:59Z"
+}
