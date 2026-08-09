@@ -7,7 +7,7 @@ Pexels/Pixabay when API keys exist) using config/broll_scene_queries.json.
 Procedural nature gradients remain available only via --mode nature.
 
 Usage:
-    python3 scripts/render_broll_video.py <project> [--mode stock|nature] [--output DIR] [--xfade 0.8]
+    python3 scripts/render_broll_video.py <project> [--mode stock|nature|local] [--canvas 3x4|9x16] [--output DIR] [--xfade 0.8]
 """
 
 from __future__ import annotations
@@ -49,7 +49,7 @@ WIDTH = 720
 HEIGHT = 960
 OUTRO_SECONDS = 2.5
 ROUNDED_FONT_CATEGORY = "chinese_rounded"
-INTRO_FADE_SECONDS = 1.5
+INTRO_FADE_SECONDS = 0.8
 VACUUM_SECONDS = 0.3       # dead-air beat between the carousel settle and the title voice
 
 # Scene-to-palette-index mapping for procedural backgrounds
@@ -351,6 +351,31 @@ def render_outro_layer(
     return canvas
 
 
+def render_running_title_layer(
+    style: dict[str, Any], book_title: str, width: int, height: int
+) -> Image.Image:
+    """Small persistent book title at the top of the frame for the narration."""
+    scale = width / WIDTH
+    canvas = Image.new("RGBA", (width, height), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(canvas)
+    size = round(28 * scale)
+    try:
+        title_font = resolve_font(
+            ROUNDED_FONT_CATEGORY, factory_root=FACTORY
+        ).load(size)
+    except FontResolutionError:
+        title_font = v2.chinese_font(style, size, title_weight=True)
+    label = f"《{book_title}》" if not book_title.startswith("《") else book_title
+    tw, _ = v2.text_size(draw, label, title_font)
+    y = round(height * 0.045)
+    stroke = max(1, round(scale))
+    draw.text(
+        ((width - tw) / 2, y), label, font=title_font,
+        fill=(255, 255, 255, 235), stroke_width=stroke, stroke_fill=(0, 0, 0, 170),
+    )
+    return canvas
+
+
 def render_title_reveal_clip(
     style: dict[str, Any],
     book_title: str,
@@ -492,9 +517,11 @@ def mix_audio(
     # `perspective` filter is broken on this ffmpeg build, so the depth cue
     # comes from the gradient instead of a keystone.)
     fade_start = total_duration - OUTRO_SECONDS
+    card_w = round(WIDTH * 0.88) // 2 * 2
+    card_h = round(HEIGHT * 0.88) // 2 * 2
     filters.append(
         f"[{current}]fade=t=out:st={fade_start:.3f}:d={OUTRO_SECONDS:.3f},"
-        f"scale=634:844[card]"
+        f"scale={card_w}:{card_h}[card]"
     )
     filters.append(
         f"gradients=size={WIDTH}x{HEIGHT}:c0=0x181818:c1=0x000000:"
@@ -712,12 +739,19 @@ def build_background_clips(
 
 
 def main() -> None:
+    global WIDTH, HEIGHT
     parser = argparse.ArgumentParser(
         description="Render a broll book video with stock footage (default) or procedural nature"
     )
     parser.add_argument("project", type=Path)
     parser.add_argument("--output", type=Path, default=None)
     parser.add_argument("--xfade", type=float, default=0.8)
+    parser.add_argument(
+        "--canvas",
+        choices=["3x4", "9x16"],
+        default="3x4",
+        help="3x4 = 720x960 (default); 9x16 = 720x1280 vertical",
+    )
     parser.add_argument(
         "--mode",
         choices=["stock", "nature", "local"],
@@ -729,7 +763,15 @@ def main() -> None:
         action="store_true",
         help="Re-download stock clips even if scene-assignment already exists",
     )
+    parser.add_argument(
+        "--no-thud",
+        action="store_true",
+        help="Skip the carousel cut-thud SFX even if carousel_thuds.wav exists",
+    )
     args = parser.parse_args()
+
+    if args.canvas == "9x16":
+        WIDTH, HEIGHT = 720, 1280
 
     project = args.project.resolve()
     style = read_json(STYLE_PATH)
@@ -903,7 +945,7 @@ def main() -> None:
         opening_clips.append(AudioClip(path=hook_path, desired_start=0.1, volume=1.0))
     # 2. Thud SFX during carousel (crescendo baked into the track itself)
     thud_path = opening_dir / "carousel_thuds.wav"
-    if thud_path.is_file():
+    if not args.no_thud and thud_path.is_file():
         opening_clips.append(AudioClip(path=thud_path, desired_start=sr_start, volume=0.9, is_sfx=True))
     # 3. "今天分享" during carousel
     carousel_voice_path = opening_dir / "carousel_voice_cosy.wav"
@@ -956,8 +998,8 @@ def main() -> None:
         opening_voice = render_dir / "opening_mixed.wav"
         voice_end = get_voice_end(opening_clips)
         mix_clips(opening_clips, opening_voice, total_duration=voice_end + 2.0)
-        # 1.2s pause after title voice before main narration starts
-        voice_delay_val = voice_end + 1.2
+        # 0.6s pause after title voice before main narration starts
+        voice_delay_val = voice_end + 0.6
         print(f"  audio sequencer: voice_delay={voice_delay_val:.2f}s (opening ends at {voice_end:.2f}s)")
 
     # total_duration must cover the actual narration slot: the opening audio
@@ -986,6 +1028,16 @@ def main() -> None:
             "kind": "caption",
             "line_id": line.line_id,
         })
+
+    # Running book title at the top, from narration start until the outro card
+    running_title_path = overlay_dir / "running_title.png"
+    render_running_title_layer(style, book_title, WIDTH, HEIGHT).save(running_title_path)
+    overlays.append({
+        "path": running_title_path,
+        "start": round(voice_delay_val, 3),
+        "end": round(voice_delay_val + voice_duration, 3),
+        "kind": "running_title",
+    })
 
     # Outro content overlay — channel branding + thank you
     outro_path = overlay_dir / "outro_card.png"
@@ -1020,7 +1072,7 @@ def main() -> None:
     output_dir = args.output or (project / "10_delivery_交付/broll")
     output_dir.mkdir(parents=True, exist_ok=True)
     suffix = {"broll_stock": "stock", "broll_local": "local", "broll_nature": "nature"}.get(render_mode, "nature")
-    output_path = output_dir / f"{slug}-broll-{suffix}-3x4.mp4"
+    output_path = output_dir / f"{slug}-broll-{suffix}-{args.canvas}.mp4"
 
     mix_audio(full_video, overlays, voice, bgm, total_duration, output_path, style, voice_delay=voice_delay_val, opening_voice=opening_voice, vacuum=vacuum_window)
 
@@ -1028,6 +1080,7 @@ def main() -> None:
     manifest = {
         "schema_version": "1.1",
         "render_mode": render_mode,
+        "canvas": args.canvas,
         "project_id": slug,
         "script_version": script["version"],
         "voice": str(voice.relative_to(project)),

@@ -1,0 +1,3 @@
+  voice: 05_voice_人声/v3-cosy-master.wav (12 timed lines)
+  audio sequencer: voice_delay=8.53s (opening ends at 7.93s)
+{"project": "nonviolent-communication", "render_mode": "broll_local", "output": "/home/vimalinx/MakeMoney/book-video-factory/demo-workspace/book_video_warehouse/projects/nonviolent-communication/10_delivery_交付/broll/nonviolent-communication-broll-local-9x16.mp4", "qc": "pass", "dimensions": [720, 1280], "duration": 61.747, "segments": 10}

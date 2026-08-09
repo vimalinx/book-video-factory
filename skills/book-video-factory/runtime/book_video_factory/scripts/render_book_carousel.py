@@ -184,10 +184,22 @@ def concat_with_xfade(clips: list[Path], output: Path) -> None:
 
 
 def main() -> int:
+    global WIDTH, HEIGHT, FLASH_START_DURATION, FLASH_END_DURATION, LAST_BOOK_HOLD
     parser = argparse.ArgumentParser(description="Generate book carousel intro")
     parser.add_argument("project", type=Path)
     parser.add_argument("--output", type=Path, default=None)
+    parser.add_argument("--width", type=int, default=WIDTH)
+    parser.add_argument("--height", type=int, default=HEIGHT)
+    parser.add_argument("--flash-scale", type=float, default=1.0,
+                        help="Multiply every flash duration (e.g. 0.65 = faster cut rhythm)")
+    parser.add_argument("--last-hold", type=float, default=LAST_BOOK_HOLD,
+                        help="Extra hold seconds on the selected book before crossfade out")
     args = parser.parse_args()
+
+    WIDTH, HEIGHT = args.width, args.height
+    FLASH_START_DURATION *= args.flash_scale
+    FLASH_END_DURATION *= args.flash_scale
+    LAST_BOOK_HOLD = args.last_hold
 
     project = args.project.resolve()
     carousel_dir = project / "01_research_资料搜集/sources/carousel"

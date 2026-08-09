@@ -1,0 +1,57 @@
+{
+  "agent": "claude",
+  "created_at": "2026-08-08T16:29:53Z",
+  "evidence": [
+    {
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786206086222132045,
+      "origin": {
+        "mtime_ns": 1786206518594122626,
+        "path": "/home/vimalinx/.kimi-code/sessions/wd_book-video-factory_ea57c8d32fdf/session_8d56f9b2-3a6e-4a40-85e9-19eae3bdb9a5/agents/main/tasks/bash-cm6dgpde/output.log",
+        "scope": "external",
+        "sha256": "3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45",
+        "size_bytes": 467
+      },
+      "path": ".ai/evidence/snapshots/3b/3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45/output.log",
+      "role": "run-log-v17-render",
+      "scope": "project",
+      "sha256": "3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45",
+      "size_bytes": 467
+    },
+    {
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786206594103677474,
+      "origin": {
+        "mtime_ns": 1786206550277866436,
+        "path": "/tmp/bvf-frames/v17_30.jpg",
+        "scope": "external",
+        "sha256": "fe360169ffdb932b3434151cdd3e92f72c9235cf535945e65115ef5a7835c72c",
+        "size_bytes": 77686
+      },
+      "path": ".ai/evidence/snapshots/fe/fe360169ffdb932b3434151cdd3e92f72c9235cf535945e65115ef5a7835c72c/v17-30.jpg",
+      "role": "qc-frame-running-title",
+      "scope": "project",
+      "sha256": "fe360169ffdb932b3434151cdd3e92f72c9235cf535945e65115ef5a7835c72c",
+      "size_bytes": 77686
+    }
+  ],
+  "finished_at": "2026-08-08T16:29:54Z",
+  "id": "SES-20260808T162953Z-02c7a9",
+  "kind": "session",
+  "model": null,
+  "native_session_id": null,
+  "native_session_ref": null,
+  "notes": [],
+  "objective": "用户看 v16 后要求:去掉 carousel 切书音效、最后一本书定格延长、正文阶段顶部常驻《非暴力沟通》书名",
+  "outcome": "success",
+  "schema_version": "1.0",
+  "sensitivity": "internal",
+  "source_ids": [],
+  "status": "finished",
+  "summary": "v17 完成:三条反馈全部落地并抽帧验证;成片覆盖更新 nonviolent-communication-broll-local-9x16.mp4(61.7s)",
+  "tags": [],
+  "title": "v17 反馈迭代:去切书音效/延长定格/常驻书名",
+  "updated_at": "2026-08-08T16:29:54Z"
+}

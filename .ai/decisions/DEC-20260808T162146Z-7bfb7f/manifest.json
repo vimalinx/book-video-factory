@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-08-08T16:21:46Z",
+  "decision": "text_intro 用首段 B-roll 静帧(压暗+渐变遮罩+1.00→1.05 推近)替代纯黑底,字号 48→60;carousel --flash-scale 0.65(4.7s→3.5s);片头淡入 1.5→0.8s;正文进场停顿 1.2→0.6s;render_broll_video 新增 --canvas 9x16(720x1280),B-roll 从 4K 源重裁;caption 层竖屏 y 按 height/1920 等比",
+  "id": "DEC-20260808T162146Z-7bfb7f",
+  "kind": "decision",
+  "rationale": "最终渲染 QC pass,正文进场 8.53s(v15 约 11s),总时长 63.6s→61.7s;抽帧目检钩子/字幕/outro 均正常",
+  "schema_version": "1.0",
+  "source_ids": [
+    "SES-20260808T161903Z-107aec"
+  ],
+  "status": "accepted",
+  "supersedes": null,
+  "title": "v16 采用 B-roll 背景钩子 + 加速 carousel + 9:16",
+  "updated_at": "2026-08-08T16:21:46Z"
+}

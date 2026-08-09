@@ -1,0 +1,15 @@
+{
+  "created_at": "2026-08-08T16:29:54Z",
+  "decision": "render_broll_video 加 --no-thud 跳过 carousel_thuds.wav;render_book_carousel 加 --last-hold(1.9→3.0s);新增 render_running_title_layer,正文开始至 outro 前顶部常驻书名(28px 圆体,4.5% 高度)",
+  "id": "DEC-20260808T162954Z-99c8b6",
+  "kind": "decision",
+  "rationale": "v17 渲染 QC pass;抽帧 t=7.5 定格仍在书封,t=12/30 顶部书名与底部字幕共存无重叠",
+  "schema_version": "1.0",
+  "source_ids": [
+    "SES-20260808T162953Z-02c7a9"
+  ],
+  "status": "accepted",
+  "supersedes": null,
+  "title": "v17:--no-thud、--last-hold 3.0、running title 层",
+  "updated_at": "2026-08-08T16:29:54Z"
+}

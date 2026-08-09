@@ -1,0 +1,119 @@
+{
+  "agent": "claude",
+  "created_at": "2026-08-08T16:19:03Z",
+  "evidence": [
+    {
+      "availability": "drifted",
+      "drift_observed_at": "2026-08-08T16:30:17Z",
+      "drift_observed_mtime_ns": 1786206518464122747,
+      "drift_observed_sha256": "30e5fb3c5ad48dbc55a0bf783f003b28b79e58026b3a131c6614c08d60757bc0",
+      "drift_observed_size_bytes": 33280405,
+      "drift_reason": "v17 反馈迭代重渲染覆盖了同一路径;v16 版本的参数与 QC 记录保留在该 session 的 decision 与 note 中",
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786205993266614581,
+      "path": "demo-workspace/book_video_warehouse/projects/nonviolent-communication/10_delivery_交付/broll/nonviolent-communication-broll-local-9x16.mp4",
+      "role": "final-artifact",
+      "scope": "project",
+      "sha256": "f5db46cda695dffa3cb4ca2072ff916934bdc1ce1f09f4df44064cc87c17f1de",
+      "size_bytes": 33114878
+    },
+    {
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786206086222132045,
+      "origin": {
+        "mtime_ns": 1786205736312857021,
+        "path": "/home/vimalinx/.kimi-code/sessions/wd_book-video-factory_ea57c8d32fdf/session_8d56f9b2-3a6e-4a40-85e9-19eae3bdb9a5/agents/main/tasks/bash-w58ea3yr/output.log",
+        "scope": "external",
+        "sha256": "3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45",
+        "size_bytes": 467
+      },
+      "path": ".ai/evidence/snapshots/3b/3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45/output.log",
+      "role": "run-log-failed-first-render",
+      "scope": "project",
+      "sha256": "3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45",
+      "size_bytes": 467
+    },
+    {
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786206086222132045,
+      "origin": {
+        "mtime_ns": 1786205993526614336,
+        "path": "/home/vimalinx/.kimi-code/sessions/wd_book-video-factory_ea57c8d32fdf/session_8d56f9b2-3a6e-4a40-85e9-19eae3bdb9a5/agents/main/tasks/bash-us2p22w7/output.log",
+        "scope": "external",
+        "sha256": "3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45",
+        "size_bytes": 467
+      },
+      "path": ".ai/evidence/snapshots/3b/3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45/output.log",
+      "role": "run-log-final-render",
+      "scope": "project",
+      "sha256": "3bf43048936970edbddcdf0abf6ae85d33da4889a1b16283143d1b4edb4a5a45",
+      "size_bytes": 467
+    },
+    {
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786206086427933812,
+      "origin": {
+        "mtime_ns": 1786206015891900586,
+        "path": "/tmp/bvf-frames/v16fix_23.jpg",
+        "scope": "external",
+        "sha256": "e839f387e8b26acfbf644fdb171f50103bc8cb0b687992e6d02f8cac23a6142f",
+        "size_bytes": 52484
+      },
+      "path": ".ai/evidence/snapshots/e8/e839f387e8b26acfbf644fdb171f50103bc8cb0b687992e6d02f8cac23a6142f/v16fix-23.jpg",
+      "role": "qc-frame-caption",
+      "scope": "project",
+      "sha256": "e839f387e8b26acfbf644fdb171f50103bc8cb0b687992e6d02f8cac23a6142f",
+      "size_bytes": 52484
+    },
+    {
+      "kind": "file",
+      "mode": "snapshot",
+      "mtime_ns": 1786206086504198807,
+      "origin": {
+        "mtime_ns": 1786205611067390385,
+        "path": "/tmp/bvf-frames/intro_2.5.jpg",
+        "scope": "external",
+        "sha256": "32cbb8f2cc5343aee42dc15a77a328504ceaa01105c28f269c1f489bad7b2b15",
+        "size_bytes": 23359
+      },
+      "path": ".ai/evidence/snapshots/32/32cbb8f2cc5343aee42dc15a77a328504ceaa01105c28f269c1f489bad7b2b15/intro-2.5.jpg",
+      "role": "qc-frame-hook",
+      "scope": "project",
+      "sha256": "32cbb8f2cc5343aee42dc15a77a328504ceaa01105c28f269c1f489bad7b2b15",
+      "size_bytes": 23359
+    }
+  ],
+  "finished_at": "2026-08-08T16:22:06Z",
+  "id": "SES-20260808T161903Z-107aec",
+  "kind": "session",
+  "model": null,
+  "native_session_id": null,
+  "native_session_ref": null,
+  "notes": [
+    {
+      "id": "NOTE-20260808T162146Z-cd2a32",
+      "kind": "file",
+      "mtime_ns": 1786206106409625881,
+      "path": ".ai/sessions/SES-20260808T161903Z-107aec/private-notes/NOTE-20260808T162146Z-cd2a32-失败记录-9-16-字幕越界.md",
+      "scope": "project",
+      "sha256": "25d4f3389896845e8843c93c9b0f6f456145ebf5387c7172fb3cfe8e0134bc16",
+      "size_bytes": 440,
+      "title": "失败记录:9:16 字幕越界",
+      "visibility": "private"
+    }
+  ],
+  "objective": "用户要求优化视频表现:重做开头钩子、收紧节奏、转 9:16 竖屏,出一版对比片",
+  "outcome": "success",
+  "schema_version": "1.0",
+  "sensitivity": "internal",
+  "source_ids": [],
+  "status": "finished",
+  "summary": "完成钩子+节奏+9:16 优化:v16 成片 nonviolent-communication-broll-local-9x16.mp4 QC pass;三个渲染脚本新增画布参数并同步 skills 源头与 demo-workspace;修复 build_final_video_v2 竖屏字幕越界 bug;18 条 B-roll 从 4K 源重裁 720x1280(旧 3:4 备份在 normalized-3x4)",
+  "tags": [],
+  "title": "v16 开头钩子+节奏+9:16 竖屏优化",
+  "updated_at": "2026-08-08T16:30:17Z"
+}

@@ -1,0 +1,17 @@
+{
+  "created_at": "2026-08-08T16:19:40Z",
+  "evidence": [],
+  "finished_at": "2026-08-08T16:22:06Z",
+  "hypothesis": "B-roll 背景钩子+更大字号+加速 carousel+收紧停顿,正文进场可从 ~11s 提前到 ~8.5s,且 9:16 竖屏全链路可用",
+  "id": "EXP-20260808T161940Z-86df68",
+  "kind": "experiment",
+  "outcome": "passed",
+  "result": "9:16 全链路可用;钩子改为 B-roll 背景+推近+60px;carousel 3.5s;正文进场 8.53s(提前 ~2.5s);发现并修复竖屏字幕 y 硬编码越界 bug;v16 成片 QC pass 61.7s",
+  "run_ids": [],
+  "schema_version": "1.0",
+  "session_id": "SES-20260808T161903Z-107aec",
+  "status": "finished",
+  "tags": [],
+  "title": "钩子+节奏+9:16 能否提升开头留存",
+  "updated_at": "2026-08-08T16:22:06Z"
+}

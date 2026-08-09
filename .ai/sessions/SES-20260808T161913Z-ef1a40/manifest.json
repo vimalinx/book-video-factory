@@ -1,0 +1,22 @@
+{
+  "agent": "claude",
+  "created_at": "2026-08-08T16:19:13Z",
+  "evidence": [],
+  "finished_at": "2026-08-08T16:19:40Z",
+  "id": "SES-20260808T161913Z-ef1a40",
+  "kind": "session",
+  "model": null,
+  "native_session_id": null,
+  "native_session_ref": null,
+  "notes": [],
+  "objective": "x",
+  "outcome": "blocked",
+  "schema_version": "1.0",
+  "sensitivity": "internal",
+  "source_ids": [],
+  "status": "finished",
+  "summary": "误创建的重复 session,无实际工作;真实工作记录在 SES-20260808T161903Z-107aec",
+  "tags": [],
+  "title": "v16 开头钩子+节奏+9:16 竖屏优化",
+  "updated_at": "2026-08-08T16:19:40Z"
+}

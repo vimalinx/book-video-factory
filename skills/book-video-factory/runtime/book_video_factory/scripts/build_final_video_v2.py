@@ -303,7 +303,9 @@ def render_caption_layer(style: dict[str, Any], line: TimedLine, width: int, hei
     en_lines = wrap_english(draw, line.en, en_font, width - round(110 * scale)) if mode == "bilingual" else []
 
     if height / width >= 1.7:
-        top = round(1410 if not is_hook else 330)
+        # Tall-canvas baselines were tuned on 1080x1920; scale them so a
+        # 720x1280 canvas doesn't push the caption below the frame.
+        top = round((1410 if not is_hook else 330) * height / 1920)
     else:
         top = round((640 if not is_hook else 205) * scale)
     zh_gap = round(58 * scale)
